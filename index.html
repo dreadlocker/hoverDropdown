@@ -1,107 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Navigation Dropdown On Hover</title>
-  </head>
 
-  <body>
-    <div id="navContainer">
-      <div name="option">
-        About Me
-        <div id="moreInfo1">
-          <p>p1</p>
-          <p>p1</p>
-          <p>p1</p>
-          <p>p1</p>
-          <p>p1</p>
-        </div>
-      </div>
-      <div name="option">
-        My Places
-        <div id="moreInfo2">
-          <p>p2</p>
-          <p>p2</p>
-          <p>p2</p>
-          <p>p2</p>
-          <p>p2</p>
-        </div>
-      </div>
-      <div name="option">
-        Other Links
-        <div id="moreInfo3">
-          <p>p3</p>
-          <p>p3</p>
-          <p>p3</p>
-          <p>p3</p>
-          <p>p3</p>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Navigation Dropdown On Hover</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js"></script>
+</head>
+
+<body>
+  <div id="navContainer">
+    <div name="option">
+      About Me
+      <div id="moreInfo1">
+        <p>p1</p>
+        <p>p1</p>
+        <p>p1</p>
+        <p>p1</p>
+        <p>p1</p>
       </div>
     </div>
+    <div name="option">
+      My Places
+      <div id="moreInfo2">
+        <p>p2</p>
+        <p>p2</p>
+        <p>p2</p>
+        <p>p2</p>
+        <p>p2</p>
+      </div>
+    </div>
+    <div name="option">
+      Other Links
+      <div id="moreInfo3">
+        <p>p3</p>
+        <p>p3</p>
+        <p>p3</p>
+        <p>p3</p>
+        <p>p3</p>
+      </div>
+    </div>
+  </div>
+</body>
 
-    <script>
-      const navOptionsArr = document.querySelectorAll('[name="option"]');
-
-      const showDropdown = e =>
-        (e.target.firstElementChild.style.opacity = "1");
-      const hideDropdown = e =>
-        (e.target.firstElementChild.style.opacity = "0");
-
-      navOptionsArr.forEach(element => {
-        element.addEventListener("mouseenter", showDropdown);
-        element.addEventListener("mouseleave", hideDropdown);
-      });
-    </script>
-
-    <style>
-      body,
-      html {
-        margin: 0;
-        padding: 0;
-        height: 100%;
-        width: 100%;
-        background-color: black;
-        color: #bababa;
-      }
-
-      #navContainer {
-        display: flex;
-        justify-content: space-around;
-        margin-top: 1em;
-        padding: 1em 0;
-        border: 1px solid red;
-        position: relative;
-      }
-
-      div[name="option"] {
-        cursor: pointer;
-      }
-
-      #moreInfo1,
-      #moreInfo2,
-      #moreInfo3 {
-        pointer-events: none;
-        background-color: red;
-        text-align: center;
-        position: absolute;
-        width: 30%;
-        opacity: 0;
-        transition: all 1s ease;
-      }
-
-      #moreInfo1 {
-        left: 1%;
-      }
-
-      #moreInfo2 {
-        left: 34%;
-      }
-
-      #moreInfo3 {
-        left: 68%;
-      }
-    </style>
-  </body>
 </html>
